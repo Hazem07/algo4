@@ -1,0 +1,15 @@
+ALGORITHM 
+VAR
+    i,j,current:integer
+
+BEGIN
+    FOR i FROM 1 TO max arr.length-1 step  DO
+        swap(current,arr[i])
+        j=i-1
+        WHILE (j>=1 and current<arr[j]) DO
+            swap(arr[j+1],arr[j])
+            j=j-1
+        END_WHILE
+        swap(arr[j+1],current)
+    END_FOR
+END
